@@ -20,4 +20,4 @@
         Просмотр статистики других игроков  
 3. Вспомогательная информация.
 
-![Image alt](https://github.com/YupiMeister/DotaStats/master/doc/image.png)
+![Image alt](https://github.com/YupiMeister/DotaStats/raw/master/doc/schem.png)
