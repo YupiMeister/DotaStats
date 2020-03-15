@@ -19,3 +19,5 @@
         Просмотр своей Статистики  
         Просмотр статистики других игроков  
 3. Вспомогательная информация.
+
+![Image alt](https://github.com/YupiMeister/DotaStats/raw/master/doc/image.png)
