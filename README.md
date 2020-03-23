@@ -33,3 +33,7 @@
       1. Темы (светлые, темные)
       2. Размер шрифта
 
+## Общая схема
+
+![Image alt](https://github.com/YupiMeister/DotaStats/raw/master/doc/1screen.png)
+
