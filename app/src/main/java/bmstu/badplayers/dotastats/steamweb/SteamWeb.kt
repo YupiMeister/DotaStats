@@ -1,4 +1,4 @@
-package me.sunrisem.steamweb
+package bmstu.badplayers.dotastats.steamweb
 
 import khttp.get
 import khttp.structures.cookie.CookieJar

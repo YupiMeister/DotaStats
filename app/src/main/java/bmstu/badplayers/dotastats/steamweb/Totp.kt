@@ -1,4 +1,4 @@
-package me.sunrisem.steamweb
+package bmstu.badplayers.dotastats.steamweb
 
 import com.beust.klaxon.Klaxon
 import com.github.kittinunf.fuel.httpPost
