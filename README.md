@@ -33,6 +33,12 @@
       1. Темы (светлые, темные)
       2. Размер шрифта
 
+### API:
+
+1. Live:
+    i.https://api.steampowered.com/IDOTA2MatchStats_570/GetRealtimeStats/v1?key={API_KEY}&server_steam_id={steamid}
+2. https://www.opendota.com
+
 ## Общая схема
 
 ![Image alt](https://github.com/YupiMeister/DotaStats/raw/master/doc/1screen.png)
