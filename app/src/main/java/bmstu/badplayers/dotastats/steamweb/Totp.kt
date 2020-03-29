@@ -1,4 +1,4 @@
-package bmstu.badplayers.dotastats.steamweb
+package me.sunrisem.steamweb
 
 import com.beust.klaxon.Klaxon
 import com.github.kittinunf.fuel.httpPost
@@ -11,6 +11,7 @@ import javax.crypto.spec.SecretKeySpec
 import kotlin.experimental.and
 
 class SteamTotp {
+
     private fun getCurrentTime(_timeOffset: Long?): Long {
 
         var timeOffset: Long = 0
@@ -73,4 +74,5 @@ class SteamTotp {
 
         return code
     }
+
 }
