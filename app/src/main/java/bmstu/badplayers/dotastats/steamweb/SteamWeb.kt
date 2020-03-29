@@ -17,11 +17,12 @@ class SteamTradeUrl(private val regexValues: List<String>) {
 
 class SteamWeb(username: String? = null, password: String? = null, sharedSecret: String? = null) {
 
-    private val _userName: String = username ?: System.getenv("username")
-    private val _password: String = password ?: System.getenv("password")
-    private val _sharedSecret: String = sharedSecret ?: System.getenv("sharedSecret")
+    private val _userName: String = (username ?: System.getenv("username")) as String
+    private val _password: String = (password ?: System.getenv("password")) as String
+    private val _sharedSecret: String = (sharedSecret ?: System.getenv("sharedSecret")) as String
 
     private val login = Login(_userName, _password, _sharedSecret)
+    private val lll = System.getenv("")
     val loginResponse = login.doLogin()
 
     var cookies = CookieJar(login.transferLogin(loginResponse.jsonObject)[0])

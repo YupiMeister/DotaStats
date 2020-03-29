@@ -1,4 +1,4 @@
-package me.sunrisem.steamweb
+package bmstu.badplayers.dotastats.steamweb
 
 object SteamIDConsts {
 
