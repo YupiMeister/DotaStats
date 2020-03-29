@@ -33,10 +33,10 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    implementation files('/Users/slava/gitLibs/khttp-1.0.0.jar')
     implementation 'commons-codec:commons-codec:1.14'
-    implementation files('/Users/slava/gitLibs/fuel-2.2.1.jar')
-    implementation files('/Users/slava/gitLibs/klaxon-5.0.12.jar')
     implementation 'com.github.kittinunf.result:result-coroutines:3.0.0'
-    implementation files('/Users/slava/gitLibs/result-3.0.0.jar')
+    implementation files('/Users/slava/gitRepositories/DotaStats/gitLibs/result-3.0.0.jar')
+    implementation files('/Users/slava/gitRepositories/DotaStats/gitLibs/klaxon-5.0.12.jar')
+    implementation files('/Users/slava/gitRepositories/DotaStats/gitLibs/fuel-2.2.1.jar')
+    implementation files('/Users/slava/gitRepositories/DotaStats/gitLibs/khttp-1.0.0.jar')
 }
