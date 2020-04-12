@@ -44,7 +44,6 @@ class MainActivity : AppCompatActivity(), MyClickListener {
         showWebViewFragment()
     }
 
-    //вынести нахуй отсюда? не? Пока нет
     private fun showWebViewFragment() {
         if (supportFragmentManager.findFragmentByTag(WebViewFragment.TAG) != null) {
             Log.wtf(MainActivity::class.java.toString(), "")

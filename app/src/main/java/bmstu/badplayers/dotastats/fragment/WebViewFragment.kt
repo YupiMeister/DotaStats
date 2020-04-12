@@ -20,15 +20,15 @@ import butterknife.ButterKnife
 class WebViewFragment : Fragment() {
     companion object {
         const val TAG = "WebViewFragment"
-        val realmParam = "PageLogin"
+        const val REALMPARAM = "PageLogin"
     }
 
-    //private val mWebView: WebView? = view?.findViewById(R.id.webview) //
     private var mWebView: WebView? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?): View? {
+        savedInstanceState: Bundle?
+    ): View? {
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_webview, container, false)
@@ -41,29 +41,26 @@ class WebViewFragment : Fragment() {
 
         mWebView = view.findViewById(R.id.webview) as WebView
         mWebView!!.settings.javaScriptEnabled = true
-        //какой-то полный треш
-        //mWebView.getSettings().setJavaScriptEnabled(true); хз что с этим делать
-        //mWebView.
-
 
         val endpoint = "https://steamcommunity.com/openid/login?" +
                 "openid.claimed_id=http://specs.openid.net/auth/2.0/identifier_select&" +
                 "openid.identity=http://specs.openid.net/auth/2.0/identifier_select&" +
                 "openid.mode=checkid_setup&" +
                 "openid.ns=http://specs.openid.net/auth/2.0&" +
-                "openid.realm=https://" + realmParam + "&" +
-                "openid.return_to=https://" + realmParam + "/signin/";
+                "openid.realm=https://" + REALMPARAM + "&" +
+                "openid.return_to=https://" + REALMPARAM + "/signin/";
 
         mWebView!!.loadUrl(endpoint)
 
         mWebView!!.webViewClient = object : WebViewClient() {
             override fun onPageStarted(
                 view: WebView?, url: String?,
-                favicon: Bitmap?) {
+                favicon: Bitmap?
+            ) {
                 val Url = Uri.parse(url)
                 Log.d("Started URL:", Url.authority as String)
 
-                if (Url.authority!!.contains(realmParam.toLowerCase())) {
+                if (Url.authority!!.contains(REALMPARAM.toLowerCase())) {
                     mWebView!!.stopLoading()
                     val userAccountUrl: Uri = Uri.parse(Url.getQueryParameter("openid.identity"))
                     val userId = userAccountUrl.lastPathSegment
@@ -79,7 +76,7 @@ class WebViewFragment : Fragment() {
                 super.onPageFinished(view, url)
 
                 val Url = Uri.parse(url)
-                if (Url.authority!!.contains(realmParam.toLowerCase())) {
+                if (Url.authority!!.contains(REALMPARAM.toLowerCase())) {
                     Toast.makeText(activity?.applicationContext, "Finish!", Toast.LENGTH_SHORT).show();
                     startActivity(Intent(activity, ProfileActivity::class.java))
                 }
